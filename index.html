@@ -1,3 +1,32 @@
-<h1>Este es un sitio web con Github Pages</h1>
-<p>Y fue creado con amor para el Curso de Git y Github de Platzi</p>
-<p><img src="https://i.imgur.com/PfA0M2o.gif" /></p>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<div style="position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);">
+    <h1>En construcción<span>.</span></h1>
+
+    <h2>:)</h2>
+</div>
+<p style="text-align: center; margin-top: 50px"></p>
+<script>
+    console.log('hola');
+    var a = 0;
+    var text = '.';
+    var v = 0;
+
+    function f() {
+        var array = [':)', ':D', ':c', ':3', ':(', ':v', ':/', '<3'];
+        $('span').html(text);
+        text += '.';
+        $('h2').html(array[a]);
+        $('p').html(v + ' %');
+        a++;
+        if (a === array.length) a = 0;
+        (v === 100) ? $('h1').html('Hi!!'): v++;
+        setTimeout(f, 500);
+    }
+
+    f();
+</script>
